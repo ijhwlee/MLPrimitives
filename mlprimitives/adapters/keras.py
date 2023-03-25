@@ -12,9 +12,12 @@ LOGGER = logging.getLogger(__name__)
 
 
 def build_layer(layer, hyperparameters):
+    print("[DEBUG-hwlee]keras.build_layer: layer = {0}".format(layer))
     layer_class = import_object(layer['class'])
     layer_kwargs = layer['parameters'].copy()
-    if issubclass(layer_class, keras.layers.wrappers.Wrapper):
+    print("[DEBUG-hwlee]keras.build_layer: layer_class = {0},layer_kwargs = {1} ".format(layer_class, layer_kwargs))
+    print("[DEBUG-hwlee]keras.build_layer: keras.layers = {0} ".format(keras.layers))
+    #if issubclass(layer_class, keras.layers.wrappers.Wrapper):
         layer_kwargs['layer'] = build_layer(layer_kwargs['layer'], hyperparameters)
     for key, value in layer_kwargs.items():
         if isinstance(value, str):
@@ -44,10 +47,14 @@ class Sequential(object):
         self.__dict__ = state
 
     def _build_model(self, **kwargs):
+        print("[DEBUG-hwlee]keras._build_model: kwargs = {0}".format(kwargs))
         hyperparameters = self.hyperparameters.copy()
         hyperparameters.update(kwargs)
+        print("[DEBUG-hwlee]keras._build_model: hyperparameters = {0}".format(hyperparameters))
 
         model = keras.models.Sequential()
+        print("[DEBUG-hwlee]keras._build_model: model = {0}".format(model))
+        print("[DEBUG-hwlee]keras._build_model: layers = {0}".format(self.layers))
 
         for layer in self.layers:
             built_layer = build_layer(layer, hyperparameters)
@@ -60,6 +67,7 @@ class Sequential(object):
                  metrics=None, epochs=10, verbose=False, validation_split=0, batch_size=32,
                  shuffle=True, **hyperparameters):
 
+        print("[DEBUG-hwlee]keras.__init__: layers = {0}".format(layers))
         self.layers = layers
         self.optimizer = import_object(optimizer)
         self.loss = import_object(loss)
@@ -100,10 +108,12 @@ class Sequential(object):
         return kwargs
 
     def fit(self, X, y, **kwargs):
+        print("[DEBUG-hwlee]keras.fit: X = {0}, y = {1}".format(X, y))
         if not self._fitted:
             self._augment_hyperparameters(X, 'input', kwargs)
             self._augment_hyperparameters(y, 'target', kwargs)
             self.model = self._build_model(**kwargs)
+        print("[DEBUG-hwlee]keras.fit: self.model = {0}".format(self.model))
 
         if self.classification:
             y = keras.utils.to_categorical(y)
@@ -120,6 +130,7 @@ class Sequential(object):
         self._fitted = True
 
     def predict(self, X):
+        print("[DEBUG-hwlee]keras.predict: X = {0}".format(X))
         y = self.model.predict(X, batch_size=self.batch_size, verbose=self.verbose)
 
         if self.classification:
