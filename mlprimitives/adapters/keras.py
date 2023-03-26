@@ -14,9 +14,13 @@ LOGGER = logging.getLogger(__name__)
 
 
 def build_layer(layer, hyperparameters):
+    #print("[DEBUG-hwlee]mlprimitives.adapters.keras.build_layer : layer = {0}".format(layer))
     layer_class = import_object(layer['class'])
     layer_kwargs = layer['parameters'].copy()
-    if issubclass(layer_class, tf.keras.layers.wrappers.Wrapper):
+    #if issubclass(layer_class, tf.keras.layers.wrappers.Wrapper):
+    #print("[DEBUG-hwlee]mlprimitives.adapters.keras.build_layer : layer_class = {0}".format(layer_class))
+    #print("[DEBUG-hwlee]mlprimitives.adapters.keras.build_layer : issubclass(layer_class, tf.keras.layers.Wrapper) = {0}".format(issubclass(layer_class, tf.keras.layers.Wrapper)))
+    if issubclass(layer_class, tf.keras.layers.Wrapper):
         layer_kwargs['layer'] = build_layer(layer_kwargs['layer'], hyperparameters)
     for key, value in layer_kwargs.items():
         if isinstance(value, str):
@@ -129,7 +133,6 @@ class Sequential(object):
         self._fitted = True
 
     def predict(self, X):
-        print("[DEBUG-hwlee]keras.predict: X = {0}".format(X))
         y = self.model.predict(X, batch_size=self.batch_size, verbose=self.verbose)
 
         if self.classification:
