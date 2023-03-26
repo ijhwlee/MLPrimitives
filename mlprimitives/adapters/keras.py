@@ -62,12 +62,12 @@ class Sequential(object):
                  metrics=None, epochs=10, verbose=False, validation_split=0, batch_size=32,
                  shuffle=True, **hyperparameters):
 
-        print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: optimizer = {0}, loss = {1}".format(optimizer, loss))
+        #print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: optimizer = {0}, loss = {1}".format(optimizer, loss))
         if optimizer.startswith('keras') :
             optimizer = 'tensorflow.'+optimizer
         if loss.startswith('keras') :
             loss = 'tensorflow.'+loss
-        print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: optimizer = {0}, loss = {1}, after correct".format(optimizer, loss))
+        #print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: optimizer = {0}, loss = {1}, after correct".format(optimizer, loss))
         self.layers = layers
         self.optimizer = import_object(optimizer)
         self.loss = import_object(loss)
@@ -86,7 +86,7 @@ class Sequential(object):
             callback['class'] = import_object(callback['class'])
 
         self.callbacks = callbacks
-        print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: *********** END of keras.__init__ *******")
+        #print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: *********** END of keras.__init__ *******")
 
     def _setdefault(self, kwargs, key, value):
         if key in kwargs:
@@ -129,6 +129,7 @@ class Sequential(object):
         self._fitted = True
 
     def predict(self, X):
+        print("[DEBUG-hwlee]keras.predict: X = {0}".format(X))
         y = self.model.predict(X, batch_size=self.batch_size, verbose=self.verbose)
 
         if self.classification:
