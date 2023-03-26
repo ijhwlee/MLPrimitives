@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "name": "keras.Sequential.MLPMultiClassClassifier",
+        "name": "tensorflow.keras.Sequential.MLPMultiClassClassifier",
         "data_type": "single_table",
         "task_type": "classification"
     },
@@ -10,7 +10,7 @@
     },
     "primitives": [
         "mlprimitives.custom.counters.UniqueCounter",
-        "keras.Sequential.MLPMultiClassClassifier"
+        "tensorflow.keras.Sequential.MLPMultiClassClassifier"
     ],
     "input_names": {
         "mlprimitives.custom.counters.UniqueCounter#1": {

@@ -3,7 +3,9 @@
 import logging
 import tempfile
 
-import keras
+#import keras
+#from tensorflow import keras
+import tensorflow as tf
 import numpy as np
 
 from mlprimitives.utils import import_object
@@ -14,7 +16,7 @@ LOGGER = logging.getLogger(__name__)
 def build_layer(layer, hyperparameters):
     layer_class = import_object(layer['class'])
     layer_kwargs = layer['parameters'].copy()
-    if issubclass(layer_class, keras.layers.wrappers.Wrapper):
+    if issubclass(layer_class, tf.keras.layers.wrappers.Wrapper):
         layer_kwargs['layer'] = build_layer(layer_kwargs['layer'], hyperparameters)
     for key, value in layer_kwargs.items():
         if isinstance(value, str):
@@ -29,7 +31,7 @@ class Sequential(object):
         state = self.__dict__.copy()
 
         with tempfile.NamedTemporaryFile(suffix='.hdf5', delete=False) as fd:
-            keras.models.save_model(state.pop('model'), fd.name, overwrite=True)
+            tf.keras.models.save_model(state.pop('model'), fd.name, overwrite=True)
             state['model_str'] = fd.read()
 
         return state
@@ -39,7 +41,7 @@ class Sequential(object):
             fd.write(state.pop('model_str'))
             fd.flush()
 
-            state['model'] = keras.models.load_model(fd.name)
+            state['model'] = tf.keras.models.load_model(fd.name)
 
         self.__dict__ = state
 
@@ -47,7 +49,7 @@ class Sequential(object):
         hyperparameters = self.hyperparameters.copy()
         hyperparameters.update(kwargs)
 
-        model = keras.models.Sequential()
+        model = tf.keras.models.Sequential()
 
         for layer in self.layers:
             built_layer = build_layer(layer, hyperparameters)
@@ -60,6 +62,12 @@ class Sequential(object):
                  metrics=None, epochs=10, verbose=False, validation_split=0, batch_size=32,
                  shuffle=True, **hyperparameters):
 
+        print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: optimizer = {0}, loss = {1}".format(optimizer, loss))
+        if optimizer.startswith('keras') :
+            optimizer = 'tensorflow.'+optimizer
+        if loss.startswith('keras') :
+            loss = 'tensorflow.'+loss
+        print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: optimizer = {0}, loss = {1}, after correct".format(optimizer, loss))
         self.layers = layers
         self.optimizer = import_object(optimizer)
         self.loss = import_object(loss)
@@ -78,6 +86,7 @@ class Sequential(object):
             callback['class'] = import_object(callback['class'])
 
         self.callbacks = callbacks
+        print("[DEBUG-hwlee]mlptimitives.adapters.keras.__init__: *********** END of keras.__init__ *******")
 
     def _setdefault(self, kwargs, key, value):
         if key in kwargs:
@@ -106,7 +115,7 @@ class Sequential(object):
             self.model = self._build_model(**kwargs)
 
         if self.classification:
-            y = keras.utils.to_categorical(y)
+            y = tf.keras.utils.to_categorical(y)
 
         callbacks = [
             callback['class'](**callback.get('args', dict()))

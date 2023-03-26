@@ -8,8 +8,8 @@
         "dataset": "handgeometry"
     },
     "primitives": [
-        "keras.applications.resnet50.preprocess_input",
-        "keras.applications.resnet50.ResNet50",
+        "tensorflow.keras.applications.resnet50.preprocess_input",
+        "tensorflow.keras.applications.resnet50.ResNet50",
         "xgboost.XGBRegressor"
     ]
 }

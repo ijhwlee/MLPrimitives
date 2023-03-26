@@ -1,5 +1,5 @@
 {
-    "name": "keras.Sequential.LSTMTimeSeriesRegressor",
+    "name": "tensorflow.keras.Sequential.LSTMTimeSeriesRegressor",
     "contributors": [
         "Ihssan Tinawi <itinawi@mit.edu>",
         "Carles Sala <csala@csail.mit.edu>"

@@ -1,5 +1,5 @@
 {
-    "name": "keras.applications.resnet50.ResNet50",
+    "name": "tensorflow.keras.applications.resnet50.ResNet50",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -12,7 +12,7 @@
     "modalities": [
         "image"
     ],
-    "primitive": "keras.applications.resnet50.ResNet50",
+    "primitive": "tensorflow.keras.applications.resnet50.ResNet50",
     "produce": {
         "method": "predict",
         "args": [

@@ -1,5 +1,5 @@
 {
-    "name": "keras.Sequential.LSTMTimeSeriesClassifier",
+    "name": "tensorflow.keras.Sequential.LSTMTimeSeriesClassifier",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],

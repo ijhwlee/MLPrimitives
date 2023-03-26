@@ -1,5 +1,5 @@
 {
-    "name": "keras.applications.densenet.preprocess_input",
+    "name": "tensorflow.keras.applications.densenet.preprocess_input",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -12,7 +12,7 @@
     "modalities": [
         "image"
     ],
-    "primitive": "keras.applications.densenet.preprocess_input",
+    "primitive": "tensorflow.keras.applications.densenet.preprocess_input",
     "produce": {
         "args": [
             {

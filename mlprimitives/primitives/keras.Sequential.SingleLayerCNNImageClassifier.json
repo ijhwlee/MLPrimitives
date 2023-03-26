@@ -1,9 +1,9 @@
 {
-    "name": "keras.Sequential.SingleLayerCNNImageClassifier",
+    "name": "tensorflow.keras.Sequential.SingleLayerCNNImageClassifier",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
-    "description": "keras.Sequential.SingleLayerCNNImageClassifier",
+    "description": "tensorflow.keras.Sequential.SingleLayerCNNImageClassifier",
     "classifiers": {
         "type": "estimator",
         "subtype": "classifier"

@@ -1,5 +1,5 @@
 {
-    "name": "keras.applications.mobilenet.MobileNet",
+    "name": "tensorflow.keras.applications.mobilenet.MobileNet",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -12,7 +12,7 @@
     "modalities": [
         "image"
     ],
-    "primitive": "keras.applications.mobilenet.MobileNet",
+    "primitive": "tensorflow.keras.applications.mobilenet.MobileNet",
     "produce": {
         "method": "predict",
         "args": [

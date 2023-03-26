@@ -118,10 +118,10 @@
                 "type": "list",
                 "default": [
                     {
-                        "class": "keras.layers.Bidirectional",
+                        "class": "tensorflow.keras.layers.Bidirectional",
                         "parameters": {
                             "layer": {
-                                "class": "keras.layers.LSTM",
+                                "class": "tensorflow.keras.layers.LSTM",
                                 "parameters": {
                                     "units": 100,
                                     "return_sequences": true
@@ -130,17 +130,17 @@
                         }
                     },
                     {
-                        "class": "keras.layers.Flatten",
+                        "class": "tensorflow.keras.layers.Flatten",
                         "parameters": {}
                     },
                     {
-                        "class": "keras.layers.Dense",
+                        "class": "tensorflow.keras.layers.Dense",
                         "parameters": {
                             "units": 20
                         }
                     },
                     {
-                        "class": "keras.layers.Reshape",
+                        "class": "tensorflow.keras.layers.Reshape",
                         "parameters": {
                             "target_shape": "encoder_reshape_shape"
                         }
@@ -151,26 +151,26 @@
                 "type": "list",
                 "default": [
                     {
-                        "class": "keras.layers.Flatten",
+                        "class": "tensorflow.keras.layers.Flatten",
                         "parameters": {}
                     },
                     {
-                        "class": "keras.layers.Dense",
+                        "class": "tensorflow.keras.layers.Dense",
                         "parameters": {
                             "units": 50
                         }
                     },
                     {
-                        "class": "keras.layers.Reshape",
+                        "class": "tensorflow.keras.layers.Reshape",
                         "parameters": {
                             "target_shape": "generator_reshape_shape"
                         }
                     },
                     {
-                        "class": "keras.layers.Bidirectional",
+                        "class": "tensorflow.keras.layers.Bidirectional",
                         "parameters": {
                             "layer": {
-                                "class": "keras.layers.LSTM",
+                                "class": "tensorflow.keras.layers.LSTM",
                                 "parameters": {
                                     "units": 64,
                                     "return_sequences": true,
@@ -182,16 +182,16 @@
                         }
                     },
                     {
-                        "class": "keras.layers.convolutional.UpSampling1D",
+                        "class": "tensorflow.keras.layers.convolutional.UpSampling1D",
                         "parameters": {
                             "size": 2
                         }
                     },
                     {
-                        "class": "keras.layers.Bidirectional",
+                        "class": "tensorflow.keras.layers.Bidirectional",
                         "parameters": {
                             "layer": {
-                                "class": "keras.layers.LSTM",
+                                "class": "tensorflow.keras.layers.LSTM",
                                 "parameters": {
                                     "units": 64,
                                     "return_sequences": true,
@@ -203,10 +203,10 @@
                         }
                     },
                     {
-                        "class": "keras.layers.TimeDistributed",
+                        "class": "tensorflow.keras.layers.TimeDistributed",
                         "parameters": {
                             "layer": {
-                                "class": "keras.layers.Dense",
+                                "class": "tensorflow.keras.layers.Dense",
                                 "parameters": {
                                     "units": 1
                                 }
@@ -214,7 +214,7 @@
                         }
                     },
                     {
-                        "class": "keras.layers.Activation",
+                        "class": "tensorflow.keras.layers.Activation",
                         "parameters": {
                             "activation": "tanh"
                         }
@@ -225,87 +225,87 @@
                 "type": "list",
                 "default": [
                     {
-                        "class": "keras.layers.Conv1D",
+                        "class": "tensorflow.keras.layers.Conv1D",
                         "parameters": {
                             "filters": 64,
                             "kernel_size": 5
                         }
                     },
                     {
-                        "class": "keras.layers.advanced_activations.LeakyReLU",
+                        "class": "tensorflow.keras.layers.advanced_activations.LeakyReLU",
                         "parameters": {
                             "alpha": 0.2
                         }
                     },
                     {
-                        "class": "keras.layers.Dropout",
+                        "class": "tensorflow.keras.layers.Dropout",
                         "parameters": {
                             "rate": 0.25
                         }
                     },
                     {
-                        "class": "keras.layers.Conv1D",
+                        "class": "tensorflow.keras.layers.Conv1D",
                         "parameters": {
                             "filters": 64,
                             "kernel_size": 5
                         }
                     },
                     {
-                        "class": "keras.layers.advanced_activations.LeakyReLU",
+                        "class": "tensorflow.keras.layers.advanced_activations.LeakyReLU",
                         "parameters": {
                             "alpha": 0.2
                         }
                     },
                     {
-                        "class": "keras.layers.Dropout",
+                        "class": "tensorflow.keras.layers.Dropout",
                         "parameters": {
                             "rate": 0.25
                         }
                     },
                     {
-                        "class": "keras.layers.Conv1D",
+                        "class": "tensorflow.keras.layers.Conv1D",
                         "parameters": {
                             "filters": 64,
                             "kernel_size": 5
                         }
                     },
                     {
-                        "class": "keras.layers.advanced_activations.LeakyReLU",
+                        "class": "tensorflow.keras.layers.advanced_activations.LeakyReLU",
                         "parameters": {
                             "alpha": 0.2
                         }
                     },
                     {
-                        "class": "keras.layers.Dropout",
+                        "class": "tensorflow.keras.layers.Dropout",
                         "parameters": {
                             "rate": 0.25
                         }
                     },
                     {
-                        "class": "keras.layers.Conv1D",
+                        "class": "tensorflow.keras.layers.Conv1D",
                         "parameters": {
                             "filters": 64,
                             "kernel_size": 5
                         }
                     },
                     {
-                        "class": "keras.layers.advanced_activations.LeakyReLU",
+                        "class": "tensorflow.keras.layers.advanced_activations.LeakyReLU",
                         "parameters": {
                             "alpha": 0.2
                         }
                     },
                     {
-                        "class": "keras.layers.Dropout",
+                        "class": "tensorflow.keras.layers.Dropout",
                         "parameters": {
                             "rate": 0.25
                         }
                     },
                     {
-                        "class": "keras.layers.Flatten",
+                        "class": "tensorflow.keras.layers.Flatten",
                         "parameters": {}
                     },
                     {
-                        "class": "keras.layers.Dense",
+                        "class": "tensorflow.keras.layers.Dense",
                         "parameters": {
                             "units": 1
                         }
@@ -316,47 +316,47 @@
                 "type": "list",
                 "default": [
                     {
-                        "class": "keras.layers.Flatten",
+                        "class": "tensorflow.keras.layers.Flatten",
                         "parameters": {}
                     },
                     {
-                        "class": "keras.layers.Dense",
+                        "class": "tensorflow.keras.layers.Dense",
                         "parameters": {
                             "units": 100
                         }
                     },
                     {
-                        "class": "keras.layers.advanced_activations.LeakyReLU",
+                        "class": "tensorflow.keras.layers.advanced_activations.LeakyReLU",
                         "parameters": {
                             "alpha": 0.2
                         }
                     },
                     {
-                        "class": "keras.layers.Dropout",
+                        "class": "tensorflow.keras.layers.Dropout",
                         "parameters": {
                             "rate": 0.2
                         }
                     },
                     {
-                        "class": "keras.layers.Dense",
+                        "class": "tensorflow.keras.layers.Dense",
                         "parameters": {
                             "units": 100
                         }
                     },
                     {
-                        "class": "keras.layers.advanced_activations.LeakyReLU",
+                        "class": "tensorflow.keras.layers.advanced_activations.LeakyReLU",
                         "parameters": {
                             "alpha": 0.2
                         }
                     },
                     {
-                        "class": "keras.layers.Dropout",
+                        "class": "tensorflow.keras.layers.Dropout",
                         "parameters": {
                             "rate": 0.2
                         }
                     },
                     {
-                        "class": "keras.layers.Dense",
+                        "class": "tensorflow.keras.layers.Dense",
                         "parameters": {
                             "units": 1
                         }

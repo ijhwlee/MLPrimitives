@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "name": "keras.Sequential.LSTMBinaryTextClassifier",
+        "name": "tensorflow.keras.Sequential.LSTMBinaryTextClassifier",
         "data_type": "text",
         "task_type": "classification"
     },
@@ -10,7 +10,7 @@
     "primitives": [
         "mlprimitives.custom.counters.VocabularyCounter",
         "mlprimitives.custom.feature_extraction.StringVectorizer",
-        "keras.Sequential.LSTMBinaryTextClassifier"
+        "tensorflow.keras.Sequential.LSTMBinaryTextClassifier"
     ],
     "output_names": {
         "mlprimitives.custom.counters.VocabularyCounter#1": {
@@ -21,7 +21,7 @@
         "mlprimitives.custom.counters.VocabularyCounter#1": {
             "add": 1
         },
-        "keras.Sequential.LSTMBinaryTextClassifier#1": {
+        "tensorflow.keras.Sequential.LSTMBinaryTextClassifier#1": {
             "epochs": 1
         }
     }

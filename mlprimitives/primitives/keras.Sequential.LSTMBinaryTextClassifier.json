@@ -1,5 +1,5 @@
 {
-    "name": "keras.Sequential.LSTMBinaryTextClassifier",
+    "name": "tensorflow.keras.Sequential.LSTMBinaryTextClassifier",
     "contributors": [
         "Hector Dominguez <hedb_12@hotmail.com>"
     ],
@@ -51,11 +51,11 @@
             },
             "loss": {
                 "type": "str",
-                "default": "keras.losses.binary_crossentropy"
+                "default": "tensorflow.keras.losses.binary_crossentropy"
             },
             "optimizer": {
                 "type": "str",
-                "default": "keras.optimizers.RMSprop"
+                "default": "tensorflow.keras.optimizers.RMSprop"
             },
             "metrics": {
                 "type": "list",
@@ -79,26 +79,26 @@
                 "type": "list",
                 "default": [
                     {
-                        "class": "keras.layers.Embedding",
+                        "class": "tensorflow.keras.layers.Embedding",
                         "parameters": {
                             "input_dim": "vocabulary_size",
                             "output_dim": "embedding_output_dim"
                         }
                     },
                     {
-                        "class": "keras.layers.LSTM",
+                        "class": "tensorflow.keras.layers.LSTM",
                         "parameters": {
                             "units": "lstm_units"
                         }
                     },
                     {
-                        "class": "keras.layers.Dropout",
+                        "class": "tensorflow.keras.layers.Dropout",
                         "parameters": {
                             "rate": "dropout_rate"
                         }
                     },
                     {
-                        "class": "keras.layers.Dense",
+                        "class": "tensorflow.keras.layers.Dense",
                         "parameters": {
                             "units": 2,
                             "activation": "sigmoid"

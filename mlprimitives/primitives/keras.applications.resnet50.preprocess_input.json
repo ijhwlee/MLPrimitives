@@ -1,5 +1,5 @@
 {
-    "name": "keras.applications.resnet50.preprocess_input",
+    "name": "tensorflow.keras.applications.resnet50.preprocess_input",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -12,7 +12,7 @@
     "modalities": [
         "image"
     ],
-    "primitive": "keras.applications.resnet50.preprocess_input",
+    "primitive": "tensorflow.keras.applications.resnet50.preprocess_input",
     "produce": {
         "args": [
             {

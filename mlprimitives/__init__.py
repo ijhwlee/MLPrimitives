@@ -17,4 +17,5 @@ MLBLOCKS_PIPELINES = os.path.join(os.path.dirname(__file__), 'pipelines')
 def load_primitive(primitive, arguments=None):
     arguments = arguments or dict()
 
+    print("[DEBUG-hwlee]mlprimitives.__init__.load_primitive: primitive = {0}".format(primitive))
     return MLBlock(primitive, **arguments)

@@ -1,9 +1,9 @@
 {
-    "name": "keras.Sequential.LSTMTextRegressor",
+    "name": "tensorflow.keras.Sequential.LSTMTextRegressor",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
-    "description": "keras.Sequential.LSTMTextRegressor",
+    "description": "tensorflow.keras.Sequential.LSTMTextRegressor",
     "classifiers": {
         "type": "estimator",
         "subtype": "regressor"

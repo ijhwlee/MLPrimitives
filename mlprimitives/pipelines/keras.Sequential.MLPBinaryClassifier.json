@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "name": "keras.Sequential.MLPBinaryClassifier",
+        "name": "tensorflow.keras.Sequential.MLPBinaryClassifier",
         "data_type": "single_table",
         "task_type": "classification"
     },
@@ -11,7 +11,7 @@
     "primitives": [
         "mlprimitives.custom.preprocessing.ClassEncoder",
         "mlprimitives.custom.feature_extraction.CategoricalEncoder",
-        "keras.Sequential.MLPBinaryClassifier",
+        "tensorflow.keras.Sequential.MLPBinaryClassifier",
         "mlprimitives.custom.preprocessing.ClassDecoder"
     ]
 }

@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "name": "keras.Sequential.VGGCNNClassifier",
+        "name": "tensorflow.keras.Sequential.VGGCNNClassifier",
         "data_type": "image",
         "task_type": "classification"
     },
@@ -10,7 +10,7 @@
     },
     "primitives": [
         "mlprimitives.custom.counters.UniqueCounter",
-        "keras.Sequential.VGGCNNClassifier"
+        "tensorflow.keras.Sequential.VGGCNNClassifier"
     ],
     "input_names": {
         "mlprimitives.custom.counters.UniqueCounter#1": {
@@ -26,7 +26,7 @@
         "mlprimitives.custom.counters.UniqueCounter#1": {
             "add": 1
         },
-        "keras.Sequential.VGGCNNClassifier#1": {
+        "tensorflow.keras.Sequential.VGGCNNClassifier#1": {
             "epochs": 1
         }
     }

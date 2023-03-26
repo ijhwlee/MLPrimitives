@@ -1,9 +1,9 @@
 {
-    "name": "keras.Sequential.SingleLayerCNNImageRegressor",
+    "name": "tensorflow.keras.Sequential.SingleLayerCNNImageRegressor",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
-    "description": "keras.Sequential.SingleLayerCNNImageRegressor",
+    "description": "tensorflow.keras.Sequential.SingleLayerCNNImageRegressor",
     "classifiers": {
         "type": "estimator",
         "subtype": "regressor"

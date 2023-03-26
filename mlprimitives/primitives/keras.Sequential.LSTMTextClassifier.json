@@ -1,9 +1,9 @@
 {
-    "name": "keras.Sequential.LSTMTextClassifier",
+    "name": "tensorflow.keras.Sequential.LSTMTextClassifier",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
-    "description": "keras.Sequential.LSTMTextClassifier",
+    "description": "tensorflow.keras.Sequential.LSTMTextClassifier",
     "classifiers": {
         "type": "estimator",
         "subtype": "classifier"

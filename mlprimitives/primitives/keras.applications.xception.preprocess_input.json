@@ -1,5 +1,5 @@
 {
-    "name": "keras.applications.xception.preprocess_input",
+    "name": "tensorflow.keras.applications.xception.preprocess_input",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -12,7 +12,7 @@
     "modalities": [
         "image"
     ],
-    "primitive": "keras.applications.xception.preprocess_input",
+    "primitive": "tensorflow.keras.applications.xception.preprocess_input",
     "produce": {
         "args": [
             {

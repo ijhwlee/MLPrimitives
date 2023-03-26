@@ -1,5 +1,5 @@
 {
-    "name": "keras.applications.xception.Xception",
+    "name": "tensorflow.keras.applications.xception.Xception",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -12,7 +12,7 @@
     "modalities": [
         "image"
     ],
-    "primitive": "keras.applications.xception.Xception",
+    "primitive": "tensorflow.keras.applications.xception.Xception",
     "produce": {
         "method": "predict",
         "args": [

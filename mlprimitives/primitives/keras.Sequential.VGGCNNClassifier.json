@@ -1,5 +1,5 @@
 {
-    "name": "keras.Sequential.VGGCNNClassifier",
+    "name": "tensorflow.keras.Sequential.VGGCNNClassifier",
     "contributors": [
         "Hector Dominguez <hedb_12@hotmail.com>"
     ],

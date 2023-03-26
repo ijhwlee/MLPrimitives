@@ -12,8 +12,13 @@ LOGGER = logging.getLogger(__name__)
 def import_object(object_name):
     """Import an object from its Fully Qualified Name."""
 
+    print("[DEBUG-hwlee]mlprimitives.utils.import_object: object_name = {0}".format(object_name))
+    if object_name.startswith('keras') :
+        object_name = 'tensorflow.'+object_name
+    print("[DEBUG-hwlee]mlprimitives.utils.import_object: object_name = {0}, after correct".format(object_name))
     if isinstance(object_name, str):
         parent_name, attribute = object_name.rsplit('.', 1)
+        print("[DEBUG-hwlee]mlprimitives.utils.import_object: parent_name = {0}, attribute = {1}".format(parent_name, attribute))
         try:
             parent = importlib.import_module(parent_name)
         except ImportError:

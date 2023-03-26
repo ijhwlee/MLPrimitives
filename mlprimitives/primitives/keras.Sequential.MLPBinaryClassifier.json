@@ -1,5 +1,5 @@
 {
-    "name": "keras.Sequential.MLPBinaryClassifier",
+    "name": "tensorflow.keras.Sequential.MLPBinaryClassifier",
     "contributors": [
         "Hector Dominguez <hedb_12@hotmail.com>"
     ],

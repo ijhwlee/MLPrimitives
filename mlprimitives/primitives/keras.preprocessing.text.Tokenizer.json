@@ -1,5 +1,5 @@
 {
-    "name": "keras.preprocessing.text.Tokenizer",
+    "name": "tensorflow.keras.preprocessing.text.Tokenizer",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -12,7 +12,7 @@
     "modalities": [
         "text"
     ],
-    "primitive": "keras.preprocessing.text.Tokenizer",
+    "primitive": "tensorflow.keras.preprocessing.text.Tokenizer",
     "fit": {
         "method": "fit_on_texts",
         "args": [

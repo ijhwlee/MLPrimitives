@@ -1,5 +1,5 @@
 {
-    "name": "keras.applications.densenet.DenseNet169",
+    "name": "tensorflow.keras.applications.densenet.DenseNet169",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -12,7 +12,7 @@
     "modalities": [
         "image"
     ],
-    "primitive": "keras.applications.densenet.DenseNet169",
+    "primitive": "tensorflow.keras.applications.densenet.DenseNet169",
     "produce": {
         "method": "predict",
         "args": [

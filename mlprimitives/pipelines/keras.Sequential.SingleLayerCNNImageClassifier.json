@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "name": "keras.Sequential.SingleLayerCNNImageClassifier",
+        "name": "tensorflow.keras.Sequential.SingleLayerCNNImageClassifier",
         "data_type": "image",
         "task_type": "classification"
     },
@@ -10,7 +10,7 @@
     },
     "primitives": [
         "mlprimitives.custom.counters.UniqueCounter",
-        "keras.Sequential.SingleLayerCNNImageClassifier"
+        "tensorflow.keras.Sequential.SingleLayerCNNImageClassifier"
     ],
     "input_names": {
         "mlprimitives.custom.counters.UniqueCounter#1": {
@@ -26,7 +26,7 @@
         "mlprimitives.custom.counters.UniqueCounter#1": {
             "add": 1
         },
-        "keras.Sequential.SingleLayerCNNImageClassifier#1": {
+        "tensorflow.keras.Sequential.SingleLayerCNNImageClassifier#1": {
             "epochs": 1
         }
     }

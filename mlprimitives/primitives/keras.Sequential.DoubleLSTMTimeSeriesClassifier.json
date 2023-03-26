@@ -1,5 +1,5 @@
 {
-    "name": "keras.Sequential.DoubleLSTMTimeSeriesClassifier",
+    "name": "tensorflow.keras.Sequential.DoubleLSTMTimeSeriesClassifier",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],

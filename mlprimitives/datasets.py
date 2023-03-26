@@ -228,7 +228,7 @@ def _load(dataset_name):
 
 def _load_images(image_dir, filenames):
     # Lazy loading of keras to avoid unnecessary keras initializations
-    from keras.preprocessing.image import img_to_array, load_img   # noqa
+    from tensorflow.keras.preprocessing.image import img_to_array, load_img   # noqa
 
     LOGGER.debug('Loading %s images from %s', len(filenames), image_dir)
     images = []

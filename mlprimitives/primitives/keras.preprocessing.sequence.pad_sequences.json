@@ -1,5 +1,5 @@
 {
-    "name": "keras.preprocessing.sequence.pad_sequences",
+    "name": "tensorflow.keras.preprocessing.sequence.pad_sequences",
     "contributors": [
         "Carles Sala <csala@csail.mit.edu>"
     ],
@@ -10,7 +10,7 @@
         "subtype": "transformer"
     },
     "modalities": [],
-    "primitive": "keras.preprocessing.sequence.pad_sequences",
+    "primitive": "tensorflow.keras.preprocessing.sequence.pad_sequences",
     "produce": {
         "args": [
             {
